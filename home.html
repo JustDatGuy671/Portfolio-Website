@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+	<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+	<link rel="stylesheet" href="style.css">
+	<title>Dylan Aurelio</title>
+</head>
+<body>
+
+	<div class="wrapper">
+<!-- navbar Div Starts Here -->		
+		<header class ="header flex">
+			<div class ="name">
+				<img src ="Headshot.jfif" alt="" width="50px" height="50px" class ="logo">
+			</div>
+			<nav>
+				<ul class = "nav flex">
+					<li class ="hover">
+						<a href = "home.html">
+							<i class='bx bx-home'></i>
+							<span class="link_name">Home</span>
+						</a>
+					</li>
+					<li class ="hover">
+						<a href = "links.html">
+							<i class='bx bx-link'></i>
+							<span class="link_name">Projects</span>
+						</a>
+					</li>
+					<li class ="hover" onclick="openContact()">
+						<a>
+						<i class='bx bx-envelope' ></i>
+						<span class="link_name">Contact</span>
+						</a>
+					</li>
+				</ul>
+			</nav>
+		</header>
+<!-- navbar Div Ends Here -->
+<!-- Main Section Starts Here -->
+
+		<!-- About Me Starts Here -->		
+		<div class="aboutmecontainer">
+			<div class = "aboutme">
+				<div class="title">
+					<h1>About Me</h1>				
+				</div>
+				<div class="content">
+					<p>
+						Hello,<br><br>
+						My name is Dylan, I grew up in Central Texas as the youngest of 5 siblings. My family is from Guam, but I was born and raised here. 
+						I believe that family is one of the most important things, coming from a super family oriented environment. 
+						I am a recent graduate from Texas A&M - Central Texas.
+						My major was in Cybersecurity, which helped peak my interest in software development.
+						
+						<br><br>
+
+						Currently, I am learning to be a front-end developer. 
+						This website is my first major project, in which I am improving this website's code the more I learn and develop my skills.
+						I am a hard worker who excels in fast-paced environments. I fully believe in my ability to learn and adapt to my tasks that are placed infront of me.
+						
+					</p>
+				</div>
+			</div>	
+		</div>
+		<!-- About Me Ends Here -->	
+		<!--Resume Stuff-->
+		<div class ="cards">
+			<div class = "card">
+				<h2>Skills</h2>
+				<div class="info">
+					<ul class ="skills">
+						<li>HTML</li>
+						<li>CSS</li>
+						<li>Javascript</li>
+						<li>Microsoft Office</li>
+						<li>Network & Security</li>
+						<li>Python</li>
+
+					</ul>
+				</div>
+			</div>
+			<div class = "card">
+				<h2>Education</h2>
+				<div class="info">
+					<ul class="education">
+						<li>Texas A&M - Central Texas</li>
+						<li>Central Texas College</li>
+						<li>Robert M. Shoemaker Highschool</li>
+					</ul>
+				</div>
+			</div>
+			<div class = "card">
+				<h2>Work history</h2>
+				<div class="info">
+					<ul class="workhistory">
+						<li>Texas A&M University - Central Texas<span>December 2020 – August 2022
+						</span></li>
+						<li>HEB Temple Warehouse <span>July 2018 - December 2020</span></li>
+						<li>HEB Grocery Store <span>May 2018 - July 2018</span></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<!-- Picture Starts Here -->	
+		<!-- Picture Starts Here -->	
+		<div class="profilecontainer">
+			<div class="profile">
+				<div class="imgbox">
+					<img src="Headshot.jfif">			
+				</div>
+				<div class="intro">
+					<h3>Dylan Aurelio<br><span>Software Developer</span></h3>
+				</div>
+			</div>
+		</div>
+		<!-- Picture Ends Here -->	
+	<!-- Contact div starts Here -->
+		<div class="contactform" id="contactform">
+			<form onsubmit="sendEmail(); reset(); return false;">
+				<i class='bx bx-x' onclick="closeContact()"></i>					
+				<h2>Contact Form</h2>			
+				<input type="text" id="name" placeholder="Your Name" required>
+				<input type="email" id="email" placeholder="Email Address" required>
+				<input type="text" id="phone" placeholder="Phone no." required>
+				<textarea id="message" rows="4" placeholder="Enter message here"></textarea>
+				<button type="Submit">Send</button>
+			</form> 
+		</div>
+		<div class = "overlay" id="overlay"></div>
+	<!-- Contact div ends Here -->				
+	</section>
+	</div>
+<!-- Main Section ends Here -->
+	
+    <script src=" https://smtpjs.com/v3/smtp.js"></script>
+	<script src="script.js"></script>
+</body>
+</html>

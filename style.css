@@ -1,0 +1,383 @@
+:root{ 
+    --darkgreen: #071e22;
+    --bluegreen: #1D7874;
+    --mintgreen: #679289;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+html, body{
+    height: 100%;
+}
+body{
+    background-color: var(--darkgreen);
+
+}
+::-webkit-scrollbar{
+    width: 10px;
+}
+/*------------------------------*/
+/*Wrapper*/
+.wrapper{
+    height: 100%;
+    width: 100%;
+    transition: all 0.3s ease;;
+    padding: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 2rem;
+}
+.wrapper > * {
+    padding: 10px;
+}
+/*------------------------------*/
+/*Navigation Bar */
+.logo{ 
+    margin-bottom: 1rem;
+    border-radius: 50%;
+}
+.name{
+    padding-left: 10px;
+}
+.header{ 
+    padding: 10px;
+    width: 90px;;
+    background: var(--bluegreen);
+    border-radius: 25px;
+    display:flex;
+    flex-direction: column;
+    transition: width 0.2s linear;
+    position:relative;
+    overflow: hidden;
+}
+.nav{ 
+    list-style: none;
+}
+
+.bx{
+    position: relative;
+    width: 70px;
+    height: 40px;
+    top: 8px;
+    font-size: 40px;
+    text-align: center;
+}
+.nav a{
+    position:relative;
+    color: #fff;
+    font-size: 25px;
+    display:table;
+    width: 300px;
+    padding-bottom: 14px;
+    text-decoration: none;
+    justify-content: space-between;
+}
+.nav a > span{
+    font-weight: 700;
+    padding-left: 7px;
+    opacity: 0;
+    text-align: center;
+}
+@media (hover: hover){
+    .header:hover {
+        width: 200px;
+    }
+    .header:hover span{
+        opacity: 1;
+    }
+    .hover:hover{
+        background:  var(--darkgreen);
+        width: 100%;
+        transition: 0.5s;    
+        border-radius: 30px;
+    }
+}
+/*------------------------------*/
+
+/*About Me Box*/
+.aboutmecontainer{
+    display: flex;
+    align-items: center;
+    flex: 1;
+}
+.aboutmecontainer > * {
+    flex-shrink: 1;
+    flex-grow: 1;
+    max-width: 700px;
+}
+.aboutme{
+    position: relative;
+    background: var(--bluegreen);
+    border-radius: 20px;
+}
+.title{
+    background: var(--mintgreen);
+    font-size: 40px;
+    border-radius: 25px;
+    text-align: center;
+    margin: 20px;
+    padding: 10px;
+}
+.aboutme h1{
+    color: #fff;
+    font-size: 40px;
+}
+.aboutme .content{
+    background: var(--mintgreen);
+    border-radius: 20px;
+    margin: 20px;
+    padding: 20px;
+}
+.aboutme p{
+    color: #fff;
+    font-size: 20px;
+    padding: 10px;
+}
+/*------------------------------*/
+/*Resume Stuff*/
+.cards{
+    display: flex;
+    flex: 1;
+    justify-content: space-evenly;
+    flex-direction: column;
+}
+.cards > *{
+    padding: 5px;
+    max-width: 700px;
+    background: var(--bluegreen);
+    color: #fff;
+    border-radius: 20px;;
+    position: relative;
+}
+.card h2{
+    font-weight: 700px;
+    margin: 20px;
+    padding: 10px;
+    border-radius: 25px;
+    background: var(--mintgreen);
+    text-align: center;
+}
+.skills, .education, .workhistory {
+    margin: 20px;
+    padding: 10px;
+    padding-left: 2rem;
+    border-radius: 25px;
+    background: var(--mintgreen);
+}
+.workhistory li{
+    display: flex;
+    justify-content: space-between;
+}
+.card p{
+    margin: 20px;
+    padding: 20px;
+    background: var(--mintgreen);
+    border-radius: 25px; 
+    text-align: center;
+}
+/*------------------------------*/
+/*Profile*/
+.profilecontainer{
+    display: flex;
+    justify-content: flex-end;
+}
+.profile{
+    position: relative;
+    width: 300px;
+    height: 300px;
+    margin: 10px;
+    transition: 0.5s;
+    background: var(--bluegreen);
+    border-radius: 20px;
+}
+.profile:hover{
+    height: 400px;
+}
+.profile .imgbox{
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    border-radius: 20px;
+}
+.profile .imgbox img{
+    max-width: 100%;
+    transition: 0.5s;
+    border-radius: 20px;
+}
+.profile .intro{
+    position: absolute;
+    bottom: 0;
+    left: 10px;
+    right: 10px;
+    bottom: 10px;
+    height: 90px;
+    background: var(--mintgreen);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: 0.5s;
+}
+.profile:hover .intro{
+    opacity: 1;
+}
+.profile .intro h3{
+    font-size: 20px;
+    color: #fff;
+    font-weight: 500;
+    line-height:20px;
+    letter-spacing: 1px;
+}
+.profile .intro h3 span{
+    font-size: 14px;
+    color: #fff;
+    font-weight: 200;
+    line-height:20px;
+    letter-spacing: 1px;
+}
+
+/*------------------------------*/
+/*Contact Form*/
+.contactform{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    visibility: hidden;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.1);
+    transition: transform 0.4s, top 0.4s;
+    z-index: 10;
+}
+
+.opencontact{
+    visibility: visible;
+    top: 50%;
+    transform: translate(-50%, -50%) scale(1);
+}
+form{
+    background: var(--bluegreen);
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    padding: 2vw 4vw;
+    transform: scale(1);
+    text-align: center;
+    width:90%;
+    max-width: 600px;
+    position: absolute;
+}
+form .bx{
+    position: absolute;
+    font-size: 40px;
+    color: #fff;
+    right: -16px;
+    top: 5px;
+    right: 0;
+}
+
+form h2{
+    color: #fff;
+    font-weight: 800;
+    border-radius: 20px;
+    margin-bottom: 10px;
+}
+form input, form textarea{
+    border: 0;
+    margin: 10px 0;
+    padding: 20px;
+    outline: none;
+    background: var(--mintgreen);
+    font-size: 16px;
+    color: #fff;
+    border-radius: 20px;
+    resize: none;
+}
+form button{
+    padding: 15px;
+    background: var(--darkgreen);
+    color: #fff;
+    font-size: 18px;
+    border: 0;
+    outline: none;
+    cursor: pointer;
+    width: 150px;
+    margin: 20px auto;
+    border-radius: 30px;
+}
+::placeholder{
+    color: #fff;
+}
+.overlay{
+    position: fixed;
+    opacity: 0;
+    transition: 200ms ease-in-out;
+    top:0;
+    left:0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0,0,0,0.4);
+    pointer-events: none;
+}
+
+.overlayactive{
+    opacity: 1;
+    pointer-events: all;
+}
+/*------------------------------*/
+
+/*Mobile View*/
+@media (max-width: 35rem){
+    .wrapper{
+        justify-content: center;
+    }
+    .card{
+        margin: 10px;
+    }
+    .header{
+        align-items: center;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 100%;
+        padding: 1rem;
+    }
+    .logo{
+        margin-bottom: 0;
+    }
+    .nav{
+        list-style: none;
+        gap: 3rem;
+    }
+    .nav a{
+        font-size: 3rem;
+        display: 0;
+        margin: 0;
+        padding: 0;
+        width: 0;
+    }
+    .bx{
+        width: auto;
+        height: auto;
+        top: 0;
+        text-align: center;
+    }
+    .nav span{
+        display: none;
+    }
+    .flex{
+        display: flex;        
+    }
+    .workhistory span{
+        display: none;
+    }
+}
+/*------------------------------*/
